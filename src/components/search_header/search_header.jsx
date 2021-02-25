@@ -1,5 +1,5 @@
-import styles from './search_header.module.css';
-import React, { useRef } from 'react';
+import styles from "./search_header.module.css";
+import React, { useRef } from "react";
 
 const SearchHeader = ({ onSearch }) => {
   const inputRef = useRef();
@@ -12,7 +12,7 @@ const SearchHeader = ({ onSearch }) => {
   };
 
   const onKeyPress = event => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSearch();
     }
   };
@@ -20,7 +20,9 @@ const SearchHeader = ({ onSearch }) => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <img className={styles.img} src="/images/logo.png" alt="logo" />
-        <h1 className={styles.title}>Youtube</h1>
+        <h1 className={styles.title}>
+          <a href="/">Youtube</a>
+        </h1>
       </div>
       <input
         ref={inputRef}
